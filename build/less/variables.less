@@ -9,26 +9,27 @@
 //COLORS
 //--------------------------------------------------------
 //Primary
-@light-blue: #3c8dbc;
+@light-blue: #D3751C;
 //Danger
-@red: #dd4b39;
+@red: #ba2d0b;
 //Success
-@green: #00a65a;
+@green: #418c7a;
 //Info
-@aqua: #00c0ef;
+@aqua: #313439;
+@aqua: #989898;
 //Warning
-@yellow: #f39c12;
-@blue: #0073b7;
-@navy: #001F3F;
-@teal: #39CCCC;
+@yellow: #d6a136;
+@blue: #5e99aa;
+@navy: #161688;
+@teal: #5e99aa;
 @olive: #3D9970;
 @lime: #01FF70;
 @orange: #FF851B;
 @fuchsia: #F012BE;
-@purple: #605ca8;
+@purple: #161688;
 @maroon: #D81B60;
-@black: #111;
-@gray-lte: #d2d6de;
+@black: #222;
+@gray-lte: #eee;
 
 //LAYOUT
 //--------------------------------------------------------
@@ -41,17 +42,17 @@
 @screen-header-collapse: @screen-xs-max;
 
 //Link colors (Aka: <a> tags)
-@link-color: @light-blue;
+@link-color: @navy;
 @link-hover-color: lighten(@link-color, 15%);
 
 //Body background (Affects main content background only)
-@body-bg: #ecf0f5;
+@body-bg: #f0f0f0;
 
 //SIDEBAR SKINS
 //--------------------------------------------------------
 
 //Dark sidebar
-@sidebar-dark-bg: #222d32;
+@sidebar-dark-bg: @black;
 @sidebar-dark-hover-bg: darken(@sidebar-dark-bg, 2%);
 @sidebar-dark-color: lighten(@sidebar-dark-bg, 60%);
 @sidebar-dark-hover-color: #fff;
@@ -60,13 +61,13 @@
 @sidebar-dark-submenu-hover-color: #fff;
 
 //Light sidebar
-@sidebar-light-bg: #f9fafc;
-@sidebar-light-hover-bg: lighten(#f0f0f1, 1.5%);
-@sidebar-light-color: #444;
-@sidebar-light-hover-color: #000;
+@sidebar-light-bg: #e0e0e0;
+@sidebar-light-hover-bg: lighten(@sidebar-light-bg, 1.5%);
+@sidebar-light-color: darken(@sidebar-light-bg, 50%);
+@sidebar-light-hover-color: darken(@sidebar-light-bg, 75%);
 @sidebar-light-submenu-bg: @sidebar-light-hover-bg;
-@sidebar-light-submenu-color: #777;
-@sidebar-light-submenu-hover-color: #000;
+@sidebar-light-submenu-color: darken(@sidebar-light-bg, 40%);
+@sidebar-light-submenu-hover-color: darken(@sidebar-light-submenu-color, 50%);
 
 //CONTROL SIDEBAR
 //--------------------------------------------------------

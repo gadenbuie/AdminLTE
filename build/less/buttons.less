@@ -28,7 +28,7 @@
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
   }
 
-  &:focus {
+  &:focus, &:active:focus {
     outline: none;
   }
 
@@ -54,14 +54,29 @@
 }
 
 //Button color variations
+@btn-default-background-color: #f8f8f8;
 .btn-default {
-  background-color: #f4f4f4;
+  background-color: @btn-default-background-color;
   color: #444;
   border-color: #ddd;
   &:hover,
   &:active,
   &.hover {
-    background-color: darken(#f4f4f4, 5%);
+    background-color: darken(@btn-default-background-color, 5%);
+    border-color: darken(@btn-default-background-color, 5%);
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-color: darken(@btn-default-background-color, 10%);
+    border-color: darken(@btn-default-background-color, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: darken(@btn-default-background-color, 17%);
+      border-color: darken(@btn-default-background-color, 25%);
+    }
   }
 }
 
@@ -70,6 +85,20 @@
   border-color: darken(@light-blue, 5%);
   &:hover, &:active, &.hover {
     background-color: darken(@light-blue, 5%);
+    border-color: darken(@light-blue, 5%);
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-color: darken(@light-blue, 10%);
+    border-color: darken(@light-blue, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: darken(@light-blue, 17%);
+      border-color: darken(@light-blue, 25%);
+    }
   }
 }
 
@@ -78,14 +107,42 @@
   border-color: darken(@green, 5%);
   &:hover, &:active, &.hover {
     background-color: darken(@green, 5%);
+    border-color: darken(@green, 5%);
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-color: darken(@green, 10%);
+    border-color: darken(@green, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: darken(@green, 17%);
+      border-color: darken(@green, 25%);
+    }
   }
 }
 
 .btn-info {
   background-color: @aqua;
   border-color: darken(@aqua, 5%);
-  &:hover, &:active, &.hover {
+  &:hover, &.hover, &:focus, &.focus {
     background-color: darken(@aqua, 5%);
+    border-color: darken(@aqua, 5%);
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-color: darken(@aqua, 10%);
+    border-color: darken(@aqua, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: darken(@aqua, 17%);
+      border-color: darken(@aqua, 25%);
+    }
   }
 }
 
@@ -94,6 +151,20 @@
   border-color: darken(@red, 5%);
   &:hover, &:active, &.hover {
     background-color: darken(@red, 5%);
+    border-color: darken(@red, 5%);
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-color: darken(@red, 10%);
+    border-color: darken(@red, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: darken(@red, 17%);
+      border-color: darken(@red, 25%);
+    }
   }
 }
 
@@ -102,6 +173,20 @@
   border-color: darken(@yellow, 5%);
   &:hover, &:active, &.hover {
     background-color: darken(@yellow, 5%);
+    border-color: darken(@yellow, 5%);
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-color: darken(@yellow, 10%);
+    border-color: darken(@yellow, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: darken(@yellow, 17%);
+      border-color: darken(@yellow, 25%);
+    }
   }
 }
 
@@ -110,7 +195,7 @@
   background: transparent;
   color: #fff;
   &:hover,
-  &:focus,
+  &:focus, &:active:focus,
   &:active {
     color: rgba(255, 255, 255, .7);
     border-color: rgba(255, 255, 255, .7);
@@ -151,7 +236,7 @@
     border-color: #aaa;
   }
 
-  &:active, &:focus {
+  &:active, &:focus, &:active:focus {
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
     -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
